@@ -14,7 +14,10 @@ player_names = testUtility.get_player_names()
 
 nV = testUtility.get_numberVCards(len(player_names))
 
-nC = testUtility.get_numberCCards(len(player_names))
+# nC = testUtility.get_numberCCards(len(player_names))
+# Test Bug #2: number of curse cards changed to +10 + 10 * len(player_names)
+nC = 10 + 10 * len(player_names)
+
 
 box = testUtility.getBoxes(nV)
 

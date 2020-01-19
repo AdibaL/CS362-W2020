@@ -24,7 +24,17 @@ supply_order = testUtility.getSupply_Order()
 boxSupply = testUtility.get_boxSupply(box)
 
 #The supply always has these cards
-supply = testUtility.getSupply(player_names, nV, nC)
+# supply = testUtility.getSupply(player_names, nV, nC)
+# Insert Bug #1: supply["copper"]=[Dominion.Gold()]*(60-len(player_names)*7)
+supply["Copper"]=[Dominion.Gold()]*(60-len(player_names)*7)
+supply["Silver"]=[Dominion.Silver()]*40
+supply["Gold"]=[Dominion.Gold()]*30
+supply["Estate"]=[Dominion.Estate()]*nV
+supply["Duchy"]=[Dominion.Duchy()]*nV
+supply["Province"]=[Dominion.Province()]*nV
+supply["Curse"]=[Dominion.Curse()]*nC
+
+
 
 #initialize the trash
 trash = []
